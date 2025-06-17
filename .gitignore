@@ -1,36 +1,34 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
-# dependencies
+# ─────────────── dependencies ───────────────
 /node_modules
 /.pnp
 .pnp.js
 
-# testing
+# ─────────────── testing ───────────────
 /coverage
 
-# next.js
+# ─────────────── Next.js build artifacts ───────────────
 /.next/
 /out/
 
-# production
+# ─────────────── production bundles ───────────────
 /build
 
-# misc
-.DS_Store
-*.pem
-
-# debug
+# ─────────────── secrets & logs (keep OUT of git) ───────────────
+.env
+.env*.local
+.cursor/mcp.json          # Task-Master / Cursor secrets
+*.log                     # generic log files (npm, custom logs, etc.)
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# local env files
-.env
-.env*.local
+# ─────────────── deployment configs ───────────────
+.vercel                   # Vercel build cache & config
 
-# vercel
-.vercel
+# ─────────────── misc OS / editor files ───────────────
+.DS_Store                 # macOS
+*.pem                     # SSL keys
 
-# typescript
+# ─────────────── TypeScript aux ───────────────
 *.tsbuildinfo
 next-env.d.ts
